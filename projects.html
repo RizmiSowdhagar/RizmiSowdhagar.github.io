@@ -20,11 +20,12 @@
       font-weight: 500;
     }
     .section-heading {
-      text-align: center;
-      font-size: 2.5rem;
-      margin: 100px 0 30px;
-      font-weight: bold;
-    }
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 30px 0;
+  font-weight: bold;
+}
+
     .project-block {
       background-color: #004D43;
       border-radius: 16px;
@@ -89,29 +90,41 @@
 
 
   <div class="project-block">
-    <img src="images/speech.jpg" alt="Speech Emotion Recognition">
+    <img src="images/speech.png" alt="Speech Emotion Recognition">
     <div class="description">
       <h2>Speech Emotion Recognition</h2>
-      <p>Built a CNN-LSTM system to analyze .wav files and detect emotions with 85% accuracy. Features MFCC extraction (Librosa) and interactive Django web UI with real-time prediction visualization.</p>
+      <p>Human emotions play a critical role in communication, yet recognizing them through 
+        speech remains a challenging task. This project addresses that challenge by developing a 
+        deep learning system that detects emotions—such as happiness, sadness, and anger—from raw audio input.
+         By extracting MFCC features from .wav files and processing them through a hybrid CNN-LSTM architecture,
+          the model achieved an accuracy of over 85% across multiple emotion classes. The system is integrated into 
+          an interactive Django web interface, allowing users to upload audio files and visualize predictions in real-time.
+           This solution has potential applications in healthcare, customer support, and human-computer interaction.</p>
       <a href="https://github.com/RizmiSowdhagar/Speech-Emotion-Recognition" class="btn btn-primary btn-view">View Project</a>
     </div>
   </div>
 
   <div class="project-block">
-    <img src="images/llama.jpg" alt="Document QA with LlamaIndex">
+    <img src="images/llama.webp" alt="Document QA with LlamaIndex">
     <div class="description">
       <h2>Document QA with LlamaIndex</h2>
-      <p>Built an RAG pipeline using LlamaIndex, FAISS, and OpenAI GPT-4. Supports uploading PDFs, chunking, vectorizing, and retrieving context for real-time responses using Streamlit UI.</p>
-      <a href="#" class="btn btn-primary btn-view">View Project</a>
+      <p>Modern document search engines often struggle with contextual understanding and relevance,
+         especially when querying dense or unstructured files like PDFs. This project introduces a Retrieval-Augmented Generation (RAG) 
+         pipeline using LlamaIndex, FAISS, and OpenAI GPT-4 to solve that challenge. It enables users to upload documents, 
+         which are automatically chunked, embedded, and indexed using Sentence-BERT and FAISS. When a query is submitted, 
+         the most relevant context is retrieved and passed to GPT-4 to generate grounded, high-quality answers. 
+         With a user-friendly Streamlit interface, the solution supports real-time Q&A, PDF uploads, and interactive 
+         results—making document intelligence accessible, fast, and reliable.</p>
+      <a href="https://github.com/RizmiSowdhagar/Retrieval-Augmented-Generation-RAG-using-LlamaIndex-FAISS-and-OpenAI" class="btn btn-primary btn-view">View Project</a>
     </div>
   </div>
 
   <div class="project-block">
-    <img src="images/youtube.jpg" alt="YouTube Sentiment Analysis">
+    <img src="images/youtube.jpeg" alt="YouTube Sentiment Analysis">
     <div class="description">
       <h2>YouTube Sentiment Analysis</h2>
-      <p>Used SMOTE-balanced ML models (RF, SVM, LR) for classifying comment sentiment. Applied Apriori, PCA, KMeans to find metadata insights. Visualized patterns using Seaborn/Matplotlib.</p>
-      <a href="#" class="btn btn-primary btn-view">View Project</a>
+      <p>Understanding public opinion on video content is crucial for creators and platforms alike. This project focuses on classifying YouTube comments into Positive, Negative, or Neutral sentiments using advanced machine learning models such as Random Forest, Support Vector Machines (SVM), and Logistic Regression. To address class imbalance and enhance model performance, SMOTE oversampling was applied. The project includes extensive preprocessing, exploratory analysis, and visualizations like ROC curves and confusion matrices. Beyond classification, it uses KMeans clustering and Apriori association rule mining to uncover behavioral patterns based on metadata like hashtags, links, and user types—offering both predictive power and deep insight into audience feedback.</p>
+      <a href="https://github.com/RizmiSowdhagar/Sentiment-Analysis-of-YouTube-Comments" class="btn btn-primary btn-view">View Project</a>
     </div>
   </div>
 
@@ -119,8 +132,8 @@
     <img src="images/segmentation.jpg" alt="Customer Segmentation">
     <div class="description">
       <h2>Customer Segmentation</h2>
-      <p>Created ML pipeline with RandomForestClassifier, PCA + KMeans for clustering. Tuned hyperparameters with RandomizedSearchCV and exported models for deployment (Joblib).</p>
-      <a href="#" class="btn btn-primary btn-view">View Project</a>
+      <p>This project focuses on segmenting customers based on behavior and predicting satisfaction levels using advanced machine learning and clustering techniques. Leveraging algorithms like Random Forest, SVC, and KMeans—combined with PCA for dimensionality reduction—the pipeline identifies distinct customer segments and insights into their needs. Feature engineering, hyperparameter tuning (via RandomizedSearchCV), and data imputation were performed to ensure model robustness. The pipeline also includes visual tools such as confusion matrices and feature importance plots for interpretation. Trained models were exported using Joblib for deployment, making the system scalable and ready for integration into real-world business applications.</p>     
+       <a href="https://github.com/RizmiSowdhagar/Customer-Segementation" class="btn btn-primary btn-view">View Project</a>
     </div>
   </div>
 
@@ -128,19 +141,11 @@
     <img src="images/cifar.jpg" alt="CIFAR10 Classification">
     <div class="description">
       <h2>CIFAR-10 Classification with CNN</h2>
-      <p>Implemented PyTorch CNN for classifying CIFAR-10 images with over 80% accuracy. Used model checkpointing and retraining on misclassifications to boost performance by 6%.</p>
-      <a href="#" class="btn btn-primary btn-view">View Project</a>
+      <p>This project implements a deep learning pipeline using PyTorch to classify images from the CIFAR-10 dataset into ten object categories such as airplanes, cats, and trucks. A custom Convolutional Neural Network (CNN) was developed to extract spatial features and achieve over 80% classification accuracy. The training loop includes model checkpointing and automated evaluation using confusion matrices and key performance metrics. A retraining mechanism was introduced to focus on misclassified samples, improving overall accuracy by 6%. The trained model was saved using torch.save() for future inference or deployment, ensuring scalability and portability.</p> 
+         <a href="#" class="btn btn-primary btn-view">View Project</a>
     </div>
   </div>
 
-  <div class="project-block">
-    <img src="images/flight.jpg" alt="Flight Data Analysis">
-    <div class="description">
-      <h2>Flight Data Analysis</h2>
-      <p>Processed 11GB of flight data using MapReduce and Oozie on Hadoop cluster. Extracted airline delay metrics and cancellation statistics using Java-based MR programs.</p>
-      <a href="#" class="btn btn-primary btn-view">View Project</a>
-    </div>
-  </div>
 
 </body>
 </html>
