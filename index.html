@@ -1,112 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rizmi Sowdhagar | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-  <style>
-    body, html {
-      height: 100%;
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      padding-top: 75px;
-    }
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    .hero-section {
-      height: 100vh;
-      background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)), url('background.jpg') center/cover no-repeat;
-      color: white;
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', sans-serif;
+      background: linear-gradient(to right, #003B36, #002922);
+      color: #FFFCF2;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+    }
+
+    .custom-navbar {
+      position: absolute;
+      top: -10px;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .rounded-navbar {
+      border-radius: 8px;
+      background-color: #002922;
+      max-width: 800px;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .nav-link {
+      color: #FFFCF2 !important;
+      font-weight: 500;
+      padding: 0.75rem 1rem;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
       align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .hero .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border: 3px solid #FFFCF2;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #FFFCF2;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      color: #FFFCF2;
+    }
+
+    .resume-btn {
+      border: 2px solid #FFFCF2;
+      border-radius: 50px;
+      padding: 10px 30px;
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #FFFCF2;
+      background: transparent;
+      margin-top: 2rem;
+      transition: all 0.3s ease-in-out;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .resume-btn:hover {
+      background-color: #FFFCF2;
+      color: #003B36;
+      text-decoration: none;
+    }
+
+    .footer {
+      padding: 30px 0;
       text-align: center;
     }
 
-    .hero-title {
-      font-size: 3rem;
-      font-weight: bold;
-    }
-
-    .hero-subtitle {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-    }
-
-    .hero-btn {
-      border: 2px solid white;
-      color: white;
-      padding: 10px 20px;
-      margin-bottom: 20px;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: 500;
-    }
-
-    .hero-btn:hover {
-      background-color: white;
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    .social-icons i {
-      font-size: 24px;
+    .social-icon {
+      color: #FFFCF2;
+      font-size: 2rem;
       margin: 0 15px;
-      color: white;
+      text-decoration: none;
+      transition: transform 0.3s ease, color 0.3s ease;
     }
 
-    .scroll-down {
-      position: absolute;
-      bottom: 30px;
-      font-size: 24px;
-      color: white;
-    }
-
-    .navbar-nav .nav-link {
-      font-size: 1.1rem;
-      padding: 10px 15px;
+    .social-icon:hover {
+      color: #FEC260;
+      transform: scale(1.2);
     }
   </style>
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Rizmi</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+  <!-- Navbar -->
+  <nav class="navbar custom-navbar navbar-expand-lg navbar-dark">
+    <div class="container justify-content-center">
+      <div class="rounded-navbar shadow p-2">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
 
-  <div class="hero-section">
-    <h1 class="hero-title">RIZMI NAWAZ SOWDHAGAR</h1>
-    <p class="hero-subtitle">Software Engineer | Cloud & Backend Systems | AI Enthusiast</p>
-    <a href="https://drive.google.com/your-resume-link" target="_blank" class="hero-btn">Resume</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <!-- Profile Image -->
+      <img src="https://rizmisowdhagar.github.io/images/profile.png" alt="Rizmi Sowdhagar">
 
-    <div class="social-icons mt-3">
-      <a href="mailto:rs2545@njit.edu"><i class="fas fa-envelope"></i></a>
-      <a href="https://github.com/RizmiSowdhagar" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/rizmisowdhagar" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <!-- Name and Tagline -->
+      <h1>Rizmi Nawaz Sowdhagar</h1>
+      <p>Software Developer | Full Stack Engineer | Machine Learning & AI Enthusiast</p>
+      <a 
+        href="https://docs.google.com/document/d/1CCmvZm6tZZ5dXaobGjQ-3jRA7ULBB792nNCuE3q5MBM/edit?tab=t.0" 
+        class="resume-btn" 
+        target="_blank">
+        Resume
+      </a>
     </div>
+  </section>
 
-    <div class="scroll-down">
-      <i class="fas fa-chevron-down"></i>
+  <!-- Footer with Social Icons -->
+  <footer class="footer">
+    <div class="container">
+      <a href="https://github.com/RizmiSowdhagar" target="_blank" class="social-icon">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/rizmi-sowdhagar-15a1141a5/" target="_blank" class="social-icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:rs2545@njit.edu" class="social-icon">
+        <i class="fas fa-envelope"></i>
+      </a>
     </div>
-  </div>
+  </footer>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
