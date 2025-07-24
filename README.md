@@ -1,4 +1,3 @@
-# RizmiSowdhagar.github.io
 
 # 🌐 Rizmi Sowdhagar – Portfolio Website
 
@@ -21,4 +20,8 @@ This website highlights:
 ---
 
 ## 📁 Folder Structure
-
+├── index.html # Main landing page
+├── css/ # Stylesheets
+├── js/ # Scripts
+├── assets/ # Images, icons, media
+└── README.md
