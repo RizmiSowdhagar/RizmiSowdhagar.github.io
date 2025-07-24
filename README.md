@@ -48,6 +48,8 @@ git clone https://github.com/RizmiSowdhagar/RizmiSowdhagar.github.io
 cd RizmiSowdhagar.github.io
 Open index.html in your browser
 
+---
+
 ## 📌 Highlights
 
 - Fully responsive layout  
